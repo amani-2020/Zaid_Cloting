@@ -3,7 +3,7 @@ import FaucetImg from '../../images/faucets.jpg';
 import HeadImg from '../../images/headlights.jpg';
 import TripodImg from '../../images/tripods.jpg';
 import Directory from '../../components/directory/directory.component';
-
+import { Outlet } from 'react-router-dom';
 
 const Home = () =>{
   const categories= [
@@ -35,7 +35,10 @@ const Home = () =>{
   ]
   ;
   return (
-    <Directory categories={categories}/>
+    <div> 
+      <Directory categories={categories}/>
+      </div>
+   
   );
 }
 
