@@ -1,17 +1,14 @@
 import { Fragment } from "react";
 import { Outlet, Link } from "react-router-dom";
 import './navigation.styles.scss'
-import Logo from '../../images/logo.png'
+import {ReactComponent as Logo} from '../../images/logo.svg'
 const Navigation = () =>{
     return (
       <Fragment>
         <div className="navigation">
           <Link className="logo-container"  to='/'>
-              {/* <div  style={ { 
-              backgroundImage: `url(${Logo})` 
-              }}/> */}
-              <div>Logo</div>
-        </Link>
+              <Logo className="logo"/>
+          </Link>
         
           <div className="nav-links-container">
             <Link className="nav-link" to='/shop'>
