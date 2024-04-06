@@ -1,5 +1,4 @@
-import { AsyncCompiler } from "sass";
-import { signInWithGooglePopup, signInWithPopup } from "../../utils/firebase/firebase.util"
+import { signInWithGooglePopup, createUserDocumentFromAuth } from "../../utils/firebase/firebase.util"
 
 
 const SignIn  =()=>{
@@ -7,6 +6,7 @@ const SignIn  =()=>{
     const logGoogleUser = async () => {
         const response = await signInWithGooglePopup();
         console.log(response);
+       const userDocRef = await createUserDocumentFromAuth(response.user);
     }
 
     return(
